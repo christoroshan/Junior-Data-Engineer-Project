@@ -1,0 +1,14 @@
+python
+import datetime
+
+# Get the timestamp from the user
+timestamp_str = input("Enter the timestamp (format: YYYY-MM-DD HH:MM:SS): ")
+timestamp = datetime.datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
+
+# Get the duration of the video file from the user
+duration_str = input("Enter the duration of the video file (format: HH:MM:SS): ")
+duration = datetime.datetime.strptime(duration_str, "%H:%M:%S") - datetime.datetime(1900, 1, 1)
+
+# Print the results
+print("Timestamp: ", timestamp)
+print("Duration of the video file: ", duration)
